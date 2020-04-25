@@ -18,13 +18,13 @@ import WatchKit
 public final class CurrentDevice {
     
     #if os(iOS)
-    func description() -> String {
+    public func description() -> String {
         return UIDevice.current.type.rawValue
     }
     #endif
     
     #if os(macOS)
-    func description() -> String {
+    public func description() -> String {
         let service = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceMatching("IOPlatformExpertDevice"))
         defer { IOObjectRelease(service) }
         
@@ -39,7 +39,7 @@ public final class CurrentDevice {
     #endif
     
     #if os(watchOS)
-    func description() -> String {
+    public func description() -> String {
         return WKInterfaceDevice.current().localizedModel
     }
     #endif
