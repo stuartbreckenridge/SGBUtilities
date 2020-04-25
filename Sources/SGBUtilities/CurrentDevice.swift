@@ -17,6 +17,9 @@ import WatchKit
 
 public final class CurrentDevice {
     
+    public static let `default` = CurrentDevice()
+    private init() {}
+    
     #if os(iOS)
     public func description() -> String {
         return UIDevice.current.type.rawValue
