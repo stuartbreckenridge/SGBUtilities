@@ -1,3 +1,3 @@
 # SGBUtilities
 
-A description of this package.
+Code snippets used across projects.
