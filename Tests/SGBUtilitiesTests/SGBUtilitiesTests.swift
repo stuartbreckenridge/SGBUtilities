@@ -6,10 +6,9 @@ final class SGBUtilitiesTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        let deviceDescription = CurrentDevice().description()
+        let deviceDescription = CurrentDevice.default.description()
         print(deviceDescription)
         XCTAssert(deviceDescription != "")
-        
     }
 
     static var allTests = [
