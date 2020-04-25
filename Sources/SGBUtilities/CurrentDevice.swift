@@ -32,9 +32,9 @@ public final class CurrentDevice {
         defer { IOObjectRelease(service) }
         
         if let modelData = IORegistryEntryCreateCFProperty(service, "model" as CFString, kCFAllocatorDefault, 0).takeRetainedValue() as? Data {
-            return modelData.withUnsafeBytes { (cString: UnsafePointer<UInt8>) -> String in
+            return modelData.withUnsafeBytes({ (cString: UnsafePointer<UInt8>) -> String in
                 return String(cString: cString)
-            }
+            })
         }
         
         return "Unknown Mac"
