@@ -81,12 +81,12 @@ fileprivate enum Model : String {
     iPadMini5          = "iPad Mini 5",
     
     //iPad Pro
-    iPadPro9_7         = "iPad Pro 9.7\"",
-    iPadPro10_5        = "iPad Pro 10.5\"",
-    iPadPro11          = "iPad Pro 11\"",
-    iPadPro12_9        = "iPad Pro 12.9\"",
-    iPadPro2_12_9      = "iPad Pro 2 12.9\"",
-    iPadPro3_12_9      = "iPad Pro 3 12.9\"",
+    iPadPro9_7         = "iPad Pro 9.7",
+    iPadPro10_5        = "iPad Pro 10.5",
+    iPadPro11          = "iPad Pro 11",
+    iPadPro12_9        = "iPad Pro 12.9",
+    iPadPro2_12_9      = "iPad Pro 2 12.9",
+    iPadPro3_12_9      = "iPad Pro 3 12.9",
     
     //iPhone
     iPhone4            = "iPhone 4",
