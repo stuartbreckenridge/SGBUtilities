@@ -50,7 +50,6 @@ public class NotificationCentreManager: NSObject, ObservableObject {
     public static let `default` = NotificationCentreManager()
     override private init() {
         super.init()
-        centre.delegate = self
         initialConfiguration()
     }
     
