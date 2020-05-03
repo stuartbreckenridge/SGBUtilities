@@ -13,7 +13,10 @@ import IOKit
 #elseif os(watchOS)
 import WatchConnectivity
 import WatchKit
+#else
+import TVUIKit
 #endif
+
 
 public final class CurrentDevice {
     
@@ -21,6 +24,12 @@ public final class CurrentDevice {
     private init() {}
     
     #if os(iOS)
+    public func description() -> String {
+        return UIDevice.current.type.rawValue
+    }
+    #endif
+    
+    #if os(tvOS)
     public func description() -> String {
         return UIDevice.current.type.rawValue
     }
@@ -49,7 +58,7 @@ public final class CurrentDevice {
 }
 
 
-#if os(iOS)
+@available(iOS 13, tvOS 13, *)
 fileprivate enum Model : String {
     
     //Simulator
@@ -260,4 +269,3 @@ fileprivate extension UIDevice {
         return Model.unrecognized
     }
 }
-#endif
