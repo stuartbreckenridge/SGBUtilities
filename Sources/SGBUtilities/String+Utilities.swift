@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
 
     func extractedString(line: String) -> String? {
         let pattern = "[0-9]{4}hrs"
