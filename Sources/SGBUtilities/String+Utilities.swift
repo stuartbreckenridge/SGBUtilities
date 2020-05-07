@@ -21,8 +21,7 @@ public extension String {
             return String(self.utf16[start..<end])!
         }
         
-        let res = dump(results)
-        let filter = res.filter({ $0.contains(line.uppercased()) })
+        let filter = results.filter({ $0.contains(line.uppercased()) })
         if filter.count > 0 {
             return filter[0]
         }
