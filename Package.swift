@@ -23,8 +23,8 @@ let package = Package(
         .target(
             name: "SGBUtilities",
             dependencies: []),
-        .testTarget(
-            name: "SGBUtilitiesTests",
-            dependencies: ["SGBUtilities"]),
+//        .testTarget(
+//            name: "SGBUtilitiesTests",
+//            dependencies: ["SGBUtilities"]),
     ]
 )

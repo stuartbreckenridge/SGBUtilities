@@ -1,6 +1,8 @@
+
+#if  !os(watchOS) && !canImport(ObjectiveC)
 import XCTest
 
-#if !canImport(ObjectiveC)
+
 public func allTests() -> [XCTestCaseEntry] {
     return [
         testCase(SGBUtilitiesTests.allTests),

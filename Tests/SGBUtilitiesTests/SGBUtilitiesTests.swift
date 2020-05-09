@@ -1,3 +1,5 @@
+
+#if !os(watchOS)
 import XCTest
 @testable import SGBUtilities
 
@@ -15,3 +17,4 @@ final class SGBUtilitiesTests: XCTestCase {
         ("testExample", testExample),
     ]
 }
+#endif

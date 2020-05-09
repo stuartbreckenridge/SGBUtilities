@@ -131,6 +131,7 @@ fileprivate enum Model : String {
 // MARK: UIDevice extensions
 // #-#-#-#-#-#-#-#-#-#-#-#-#
 
+#if os(iOS) || os(tvOS)
 fileprivate extension UIDevice {
     
     var type: Model {
@@ -269,3 +270,4 @@ fileprivate extension UIDevice {
         return Model.unrecognized
     }
 }
+#endif
