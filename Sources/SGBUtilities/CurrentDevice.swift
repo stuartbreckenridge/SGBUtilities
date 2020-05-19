@@ -4,6 +4,7 @@
 //
 //  Created by Stuart Breckenridge on 25/04/2020.
 //
+//  Based on this answer: https://stackoverflow.com/questions/26028918/how-to-determine-the-current-iphone-device-model
 
 #if os(iOS)
 import UIKit

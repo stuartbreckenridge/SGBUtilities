@@ -8,14 +8,17 @@
 import Foundation
 import Combine
 
+public extension Notification.Name {
+    static let PersistedDidUpdate = Notification.Name("PersistedDidUpdate")
+}
+
 @propertyWrapper
 public struct Persisted<T> {
     private let key: String
-    private let notificationName: Notification.Name
     private let defaultValue: T
     
     
-    public init(key: String, notificationName: Notification.Name, defaultValue: T) {
+    public init(key: String, defaultValue: T) {
         self.key = key
         self.defaultValue = defaultValue
     }
@@ -28,7 +31,7 @@ public struct Persisted<T> {
         set {
             // Set value to UserDefaults
             UserDefaults.standard.set(newValue, forKey: key)
-            NotificationCenter.default.post(name: notificationName, object: nil)
+            NotificationCenter.default.post(name: .PersistedDidUpdate, object: nil)
         }
     }
 }
