@@ -1,3 +1,3 @@
 # SGBUtilities
 
-A description of this package.
+Utilities for use in your Swift code.
