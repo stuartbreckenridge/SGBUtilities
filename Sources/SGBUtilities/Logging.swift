@@ -25,10 +25,16 @@ public protocol Logging {
 
 public extension Logging  {
     
+    /// Use this variable in Classes and Structs
+    ///
+    ///     self.logger.debug("Debug message")
     var logger: Logger {
         Logger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: type(of: self)))
     }
     
+    /// Use this variable in static functions
+    ///
+    ///     Something.logger.debug("Debug message")
     static var logger: Logger {
         Logger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: type(of: self)))
     }
